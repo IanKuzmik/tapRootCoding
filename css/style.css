@@ -1,0 +1,525 @@
+/*
+NOTES
+  - add icons to cards, and everything
+  - add things to sticky header as it scrolls down.
+  - add printer firendly version of resume with printer logo
+*/
+/* Variables */
+/* Mixins */
+/* Keyframes */
+@keyframes circle-wiggle {
+  0% {
+    border-radius: 50%;
+  }
+  25% {
+    border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
+  }
+  50% {
+    border-radius: 50% 50% 50% 50%/60% 40% 60% 40%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 40%/40% 60% 40% 60%;
+  }
+  100% {
+    border-radius: 50%;
+  }
+}
+/* Main */
+body {
+  margin: 0;
+  background: -moz-linear-gradient(180deg, #214484 20%, #CCD0DE 100%);
+  background: -webkit-linear-gradient(180deg, #214484 20%, #CCD0DE 100%);
+  background: linear-gradient(180deg, #214484 20%, #CCD0DE 100%);
+}
+
+section {
+  margin: 0 15px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Consolas", monospace;
+}
+
+p, li {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+}
+
+a.tr-link {
+  color: #CCD0DE;
+  font-weight: 600;
+  -webkit-transition: color 0.4s ease;
+  -miz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+  text-decoration: underline #569B00;
+}
+a.tr-link:hover, a.tr-link:focus {
+  color: #569B00;
+}
+
+hr {
+  width: 80%;
+  margin-bottom: 50px;
+  height: 2px;
+  border: none;
+  background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #569B00 50%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #569B00 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #569B00 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.row {
+  display: flex;
+}
+
+.col-2, .col3, .col-4, .col-6, .col-8, .col-9, .col-10, .col-12 {
+  padding: 5px;
+}
+
+.col-2 {
+  width: calc(100%/6);
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: calc(100%/3);
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: calc(100%/1.5);
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: calc(100%/1.2);
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.font-mono {
+  font-family: "Consolas", monospace;
+}
+
+.hero, .sticky-header {
+  background-color: #CCD0DE;
+  font-family: "Consolas", monospace;
+  box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-header {
+  display: none;
+  position: sticky;
+  color: #569B00;
+  top: 0;
+  height: 50px;
+  opacity: 0.9;
+  z-index: 1000;
+  align-items: center;
+  padding: 0 20px;
+}
+.sticky-header p {
+  font-weight: 800;
+}
+.sticky-header.reveal {
+  display: flex;
+}
+
+.profile-picture.header {
+  width: 40px;
+  margin-left: 10px;
+  border-width: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  -miz-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.profile-picture.header.reveal {
+  opacity: 1;
+}
+
+.sticky-header .external-links {
+  margin-left: auto;
+}
+
+.external-links span {
+  color: #569B00;
+  -webkit-transition: all 0.4s ease;
+  -miz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.external-links span:hover, .external-links span:focus {
+  color: #214484;
+}
+
+.hero {
+  position: relative;
+  height: 250px;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 120%;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #214484;
+}
+
+.hero h2 {
+  font-size: 1.5em;
+  color: #569B00;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.quick-bio {
+  margin-bottom: 50px;
+}
+
+.quick-bio .row {
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-bio .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  height: 310px;
+  width: 310px;
+  border-radius: 50%;
+  margin: 5px;
+  -webkit-transition: border-radius 1s ease;
+  -miz-transition: border-radius 1s ease;
+  -ms-transition: border-radius 1s ease;
+  -o-transition: border-radius 1s ease;
+  transition: border-radius 1s ease;
+}
+.quick-bio .overlay:hover, .quick-bio .overlay:focus {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.quick-bio .overlay p {
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-picture {
+  -webkit-transition: border-radius 1s ease;
+  -miz-transition: border-radius 1s ease;
+  -ms-transition: border-radius 1s ease;
+  -o-transition: border-radius 1s ease;
+  transition: border-radius 1s ease;
+  border-radius: 50%;
+  border: 5px #CCD0DE solid;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.quick-bio .overlay.animate,
+.profile-picture.animate {
+  -webkit-transition: opacity 0.4s ease;
+  -miz-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  border-color: #569B00;
+  animation-name: circle-wiggle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.quick-bio h1 {
+  color: #CCD0DE;
+}
+
+.quick-bio p {
+  color: white;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+.my-services-intro {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.my-services-intro h2 {
+  color: #CCD0DE;
+}
+
+.my-services-intro p {
+  color: white;
+  margin: 0 150px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.my-services {
+  color: #214484;
+  overflow: hidden;
+}
+
+.my-services .row.right {
+  justify-content: flex-end;
+}
+.my-services .row.right .card {
+  -webkit-transform: translateX(100%);
+  -miz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.my-services .row.right .list {
+  text-align: right;
+}
+
+.my-services .list {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -miz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.my-services .list h2 {
+  color: #CCD0DE;
+}
+
+.my-services .list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.my-services .list li {
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 20px 0;
+}
+
+.my-services .card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 350px;
+  width: 35%;
+  margin: 15px 50px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  background: -moz-linear-gradient(315deg, #CCD0DE 20%, white 100%);
+  background: -webkit-linear-gradient(315deg, #CCD0DE 20%, white 100%);
+  background: linear-gradient(315deg, #CCD0DE 20%, white 100%);
+  -webkit-transition: all 0.8s ease;
+  -miz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  -webkit-transform: translateX(-100%);
+  -miz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.my-services .row.right .card {
+  background: -moz-linear-gradient(45deg, #CCD0DE 20%, white 100%);
+  background: -webkit-linear-gradient(45deg, #CCD0DE 20%, white 100%);
+  background: linear-gradient(45deg, #CCD0DE 20%, white 100%);
+}
+
+.my-services .card h3 {
+  text-decoration: underline;
+}
+
+.my-services .card p {
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0 15%;
+}
+
+.my-services span {
+  color: #569B00;
+  width: 30%;
+  position: relative;
+}
+
+.my-services span::before {
+  position: absolute;
+  transform: scale(12);
+  top: 50%;
+  left: 70%;
+}
+
+.my-services .row.right span::before {
+  left: unset;
+  right: 70%;
+}
+
+.my-services-outro p {
+  color: white;
+  margin: 50px 0 20px 20px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.portfolio h1 {
+  margin: 5px 0;
+  text-decoration: underline;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 5%;
+  margin: 50px 10px;
+}
+
+.portfolio-item {
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio-item img {
+  border-radius: 10px;
+  border: 5px #CCD0DE solid;
+  width: 280px;
+  height: 200px;
+}
+
+.portfolio-item p {
+  height: 80px;
+}
+
+.portfolio-item button {
+  font-family: "Consolas", monospace;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 3px #CCD0DE solid;
+  background-color: transparent;
+  color: #CCD0DE;
+  -webkit-transition: all 0.4s ease;
+  -miz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin: 3px;
+}
+.portfolio-item button:hover, .portfolio-item button:focus {
+  border-color: #569B00;
+  color: black;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.resume h1 {
+  margin: 5px 0;
+  text-decoration: underline;
+}
+
+.resume .experience {
+  margin-bottom: 50px;
+}
+
+.resume .experience h4 {
+  text-decoration: underline;
+  margin-left: 15px;
+}
+
+.resume .experience p {
+  margin: 0 15px;
+}
+
+.resume .information {
+  border-left: #CCD0DE 3px solid;
+  padding-left: 15px;
+}
+
+.resume .information ul {
+  margin-bottom: 10px;
+  padding-inline-start: 15px;
+}
+
+.resume .information ul.contact {
+  padding: 0;
+  list-style-type: none;
+}
+
+.resume .information ul.contact a {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 100;
+  -webkit-transition: color 0.4s ease;
+  -miz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.resume .information ul.contact a:hover, .resume .information ul.contact a:focus {
+  color: #569B00;
+}
+
+.resume .information ul li {
+  margin: 2px 0;
+}
+
+.resume .information span {
+  margin-right: 5px;
+}
+
+footer {
+  height: 300px;
+  background-color: #CCD0DE;
+}
+
+/*# sourceMappingURL=style.css.map */
