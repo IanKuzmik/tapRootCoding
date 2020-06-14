@@ -3,23 +3,25 @@
 <html lang="en" dir="ltr">
 
   <head>
-   <meta name="description" content="My personal website for contracts and job applications">
+   <meta name="description" content="My personal web development contracting website for custom built websites and software development job applications">
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="img/carrot.ico">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/tap-root-font-icon.css">
    <title>tapRoot Coding</title>
   </head>
 
   <body>
+    <a name="top-anchor"></a>
     <header id="js-sticky-header" class="sticky-header">
       <p class='logo-temp'><span class="font-mono">tap</span>Root</p>
-      <img id="js-header-profile-picture" class="profile-picture header" src="img/profile-pic.jpg" alt="Profile Picture">
+      <a href="#quick-bio-anchor"><img id="js-header-profile-picture" class="profile-picture header" src="img/profile-pic.jpg" alt="Profile Picture"></a>
       <div class="external-links">
         <a href="mailto:taprootcoding@gmail.com" target="_blank"><span class="tr-icon-mail-alt"></span></a>
         <a href="https://linkedin.com/in/ian-kuzmik" target="_blank"><span class="tr-icon-linkedin-circled"></span></a>
-        <a href="https://twitter.com/tapRootCoding" target="_blank"><span class="tr-icon-twitter-circled"></span></a>
-        <a href="https://github.com/IanKuzmik" target="_blank"><span class="tr-icon-github"></span></a>
+        <a href="https://twitter.com/taprootcoding" target="_blank"><span class="tr-icon-twitter-circled"></span></a>
+        <a href="https://github.com/iankuzmik" target="_blank"><span class="tr-icon-github"></span></a>
       </div>
     </header>
     <header class="hero">
@@ -30,21 +32,22 @@
 
     <main>
 
+      <a name="quick-bio-anchor"></a><br><br>
       <section class="quick-bio">
         <div class="row">
           <div class="col-4 profile-picture-container">
             <img id="js-bio-profile-picture" class="profile-picture" src="img/profile-pic.jpg" alt="Profile Picture">
-            <div id="js-profile-picture-overlay" class="overlay"><p>Go to Full Bio</p> </div>
+            <a href="#full-bio-anchor"><div id="js-profile-picture-overlay" class="overlay"><p>Go to Full Bio</p></div></a>
           </div>
           <div class="col-6 quick-bio-text">
             <h1>Hello,</h1>
             <p>
               My name is Ian. I started tapRoot Coding in an effort to persue my passion for
-              programming and web development at the professional level. I offer website sulutions
+              programming and web development at the professional level. I offer website solutions
               from sustainability diagnostics, to re-designing and re-vamping, to building websites
               completely from scratch. I am also interested in full-time/part-time positions either
               remotely or let's talk about it. Below are some of the services I offer,
-              <a class="tr-link" href="#">portfolio</a> projects, and <a class="tr-link" href="#">resume</a> and expereince.
+              <a class="tr-link" href="#portfolio-anchor">portfolio</a> projects, and <a class="tr-link" href="#resume-anchor">resume</a> and expereince.
             </p>
             <p>Contact me at <a class="tr-link" href="mailto:taprootcoding@gmail.com" target="_blank">tapRootCoding@gmail.com</a></p>
           </div>
@@ -160,6 +163,7 @@
         </div>
       </section>
 
+      <a name="portfolio-anchor"></a>
       <hr>
 
       <section class="portfolio">
@@ -170,29 +174,30 @@
             <h1>Xochis Apothecary</h1>
             <p>My largest project to-date. This WordPress site features a 100% custom theme, and utilizes BootStrap and jQeury.</p>
             <button type="button" name="button">Veiw Demo</button>
-            <a href="https://github.com/IanKuzmik/tapRoot-apothecary-theme" target="_blank"><button type="button" name="button">View Code</button></a>
+            <a href="https://github.com/iankuzmik/taproot-apothecary-theme" target="_blank"><button type="button" name="button">View Code</button></a>
           </div>
           <div class="portfolio-item">
             <img src="img/portfolio-taproot.png" alt="tapRootCoding Website">
             <h1>tapRoot Coding</h1>
             <p>Yes, this very website! I tried to be as simple and lightweight as possible while still delivering a dynamic UX. All code used for this site, minus Fontello font icons, is entirely my own.</p>
-            <button type="button" name="button">Veiw Code</button>
+            <a href="https://github.com/iankuzmik/taprootcoding" target="_blank"><button type="button" name="button">Veiw Code</button></a>
           </div>
           <div class="portfolio-item">
-            <img src="img/portfolio-taproot.png" alt="tapRoot-Toolbox Plugin">
+            <img src="img/portfolio-taproot-plugin.png" alt="tapRoot-Toolbox Plugin">
             <h1>tapRoot-Toolbox</h1>
             <p>A small WordPress plugin to add optimaztions to client websites. Right now the only functionality is setting HTTP headers for better security, but I plan on adding more features.</p>
-            <button type="button" name="button">Veiw Code</button>
+            <a href="https://github.com/iankuzmik/tr-toolbox" target="_blank"><button type="button" name="button">Veiw Code</button></a>
           </div>
           <div class="portfolio-item">
             <img src="img/portfolio-rlsc.png" alt="Red Lodge Senior Center Website">
             <h1>Red Lodge Senior Center</h1>
             <p>A WordPress site built with Elementor and the OceanWP theme. While content is now in the client's hands, I still maintain the site with updates, backups, and consultation.</p>
-            <button type="button" name="button">Veiw Website</button>
+           <a href="https://redlodgeseniorcenter.com" target="_blank"><button type="button" name="button">Veiw Website</button></a>
           </div>
         </div>
       </section>
 
+      <a name="full-bio-anchor"></a>
       <hr>
 
       <section class="full-bio">
@@ -201,6 +206,7 @@
         <!-- theme: self sufficiancy -->
       </section>
 
+      <a name="resume-anchor"></a>
       <hr>
 
       <section class="resume">
@@ -214,7 +220,7 @@
                 <p>
                   This is a WordPress website for my wife and my's side-business. I built the theme from scratch including built in Instagram integration,
                   contact form, and custom Google Maps. I also utilized the plugins ACF and CPT UI to generate a custom post type for our products. And I made use of
-                  the Bootstap and jQuery frameworks for productivity. The <a class="tr-link" href="https://github.com/IanKuzmik/tapRoot-apothecary-theme" target="_blank">code</a> for this website can be found on my GitHub, and a <a class="tr-link" href="#" target="_blank">demo</a> can be found in my portfolio.
+                  the Bootstap and jQuery frameworks for productivity. The <a class="tr-link" href="https://github.com/iankuzmik/taproot-apothecary-theme" target="_blank">code</a> for this website can be found on my GitHub, and a <a class="tr-link" href="#" target="_blank">demo</a> can be found in my portfolio.
                 </p>
                 <h4>Red Lodge Senior Center</h4>
                 <p>
@@ -263,15 +269,16 @@
             <ul class="contact">
               <li><span class="tr-icon-mail-alt"></span><a href="mailto:taprootcoding@gmail.com" target="_blank">tapRootCoding@gmail.com</a></li>
               <li><span class="tr-icon-linkedin-circled"></span><a href="https://linkedin.com/in/ian-kuzmik" target="_blank">linkedin.com/in/ian-kuzmik</a></li>
-              <li><span class="tr-icon-twitter-circled"></span><a href="https://twitter.com/tapRootCoding" target="_blank">twitter.com/tapRootCoding</a></li>
-              <li><span class="tr-icon-github"></span><a href="https://github.com/IanKuzmik" target="_blank">github.com/IanKuzmik</a></li>
+              <li><span class="tr-icon-twitter-circled"></span><a href="https://twitter.com/taprootcoding" target="_blank">twitter.com/tapRootCoding</a></li>
+              <li><span class="tr-icon-github"></span><a href="https://github.com/iankuzmik" target="_blank">github.com/IanKuzmik</a></li>
             </ul>
             <h3>Skills</h3>
               <ul>
                 <li>HTML - CSS - Javascript - PHP</li>
                 <li>Bootstrap - Sass - jQuery</li>
                 <li>WordPress - Theme/Plugin Development</li>
-                <li>Familiar With: Swift - MySQL</li>
+                <li>GitHub - Affinity Photo</li>
+                <li>Familiar With: Swift - MySQL - Python - Java</li>
               </ul>
             <h3>Education</h3>
               <ul>

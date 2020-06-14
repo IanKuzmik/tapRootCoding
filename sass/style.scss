@@ -1,17 +1,7 @@
-/*
-NOTES
-  - add icons to cards, and everything
-  - add things to sticky header as it scrolls down.
-  - add printer firendly version of resume with printer logo
-*/
-
-
-
 /* Variables */
-$tr-blue: #214484; //#659dbd; //#0154ba;
-//$tr-brown: #7c6553;
-$tr-silver: #CCD0DE; //#fbeec1;
-$tr-green: #569B00; //#6F8B2E; //#445A34; //#8d8741; //#63a302; //#9ccd00;
+$tr-blue: #214484;
+$tr-silver: #CCD0DE;
+$tr-green: #569B00;
 $tr-mono: 'Consolas', monospace;
 $tr-sans: 'Roboto', sans-serif;
 
@@ -28,14 +18,14 @@ $tr-sans: 'Roboto', sans-serif;
 }
 @mixin transform ( $val ) {
   -webkit-transform: $val;
-  -miz-transform: $val;
+  -moz-transform: $val;
   -ms-transform: $val;
   -o-transform: $val;
   transform: $val;
 }
 @mixin transition ( $attr, $time ) {
   -webkit-transition: $attr $time ease;
-  -miz-transition: $attr $time ease;
+  -moz-transition: $attr $time ease;
   -ms-transition: $attr $time ease;
   -o-transition: $attr $time ease;
   transition: $attr $time ease;
@@ -52,6 +42,7 @@ $tr-sans: 'Roboto', sans-serif;
 
 /* Main */
 //general
+html { scroll-behavior: smooth; }
 body { margin: 0;  @include gradient( 180deg, $tr-blue, 20%, $tr-silver, 100% );}
 section { margin: 0 15px; }
 h1, h2, h3, h4 { font-family: $tr-mono; }
