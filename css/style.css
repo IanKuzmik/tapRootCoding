@@ -404,6 +404,7 @@ hr {
   transform: scale(12);
   top: 50%;
   left: 70%;
+  text-shadow: none;
 }
 
 .my-services .row.right .big-icon::before {
@@ -465,6 +466,19 @@ hr {
   color: black;
   transform: scale(0.9);
   cursor: pointer;
+}
+
+.print-resume {
+  color: black;
+  font-size: 1.2em;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.print-resume:hover, .print-resume:focus {
+  color: #569B00;
 }
 
 .resume h1 {
