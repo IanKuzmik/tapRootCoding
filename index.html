@@ -47,10 +47,10 @@
       <a name="quick-bio-anchor"></a><br><br>
       <section class="quick-bio">
         <div class="row">
-          <div class="col-4 profile-picture-container"> 
+          <div class="profile-picture-container" data-col="4"> 
             <img id="js-bio-profile-picture" class="profile-picture" src="img/profile-pic.jpg" alt="Profile Picture">
           </div>
-          <div class="col-6 quick-bio-text">
+          <div class="quick-bio-text" data-col="6">
             <h1>Hello,</h1>
             <p>
               My name is Ian. I started tapRoot Coding in an effort to persue my passion for
@@ -80,6 +80,7 @@
         <div class="row performance">
           <div class="card">
             <h3>Smooth Performance</h3>
+            <span class="tr-icon-gauge-1"></span>
             <p>
               Page load times are one of the biggest factors affecting your
               website's retention rate. And whether that means a loss in revenue, drop in followers, or simply
@@ -95,11 +96,11 @@
               <li>Implement Lazy Loading</li>
             </ul>
           </div>
-          <span class="tr-icon-gauge-1"></span>
+          <span class="tr-icon-gauge-1 big-icon"></span>
         </div>
 
         <div class="row security right">
-          <span class="tr-icon-lock"></span>
+          <span class="tr-icon-lock big-icon"></span>
           <div class="list">
             <h2>I'll Focus On:</h2>
             <ul>
@@ -111,6 +112,7 @@
           </div>
           <div class="card">
             <h3>Thorough Security</h3>
+            <span class="tr-icon-lock"></span>
             <p>
               Not only can poor security practices affect your data, it
               can affect your visibility as well. With tech giants like Google constantly raising
@@ -124,11 +126,11 @@
         <div class="row sustanability">
           <div class="card">
             <h3>Sustainability</h3>
+            <span class="tr-icon-tree"></span>
             <p>
-              Yes, even websites have a carbon footprint. While perhaps miniscule by themselves, when
-              multiplied across a global scale, the transfer and processing of data over the internet
+              Yes, even websites have a carbon footprint. The transfer and processing of data over the internet
               has a massive impact on our carbon emissions and ultimately the stability of our climate.
-              Especilly when dealing with larger projects, code maintenaince and poor SEO can leak valuble
+              And, especially when dealing with larger projects, tortuous code maintenaince and poor SEO can leak valuble
               time and energy for you and the user.
             </p>
           </div>
@@ -141,11 +143,11 @@
               <li>Minimized Computational Waste</li>
             </ul>
           </div>
-          <span class="tr-icon-tree"></span>
+          <span class="tr-icon-tree big-icon"></span>
         </div>
 
         <div class="row flavor right">
-          <span class="tr-icon-brush"></span>
+          <span class="tr-icon-brush big-icon"></span>
           <div class="list">
             <h2>Enjoy:</h2>
             <ul>
@@ -157,6 +159,7 @@
           </div>
           <div class="card flavor">
             <h3>Flavor</h3>
+            <span class="tr-icon-brush"></span>
             <p>
               Every person or business has something that makes them unique. Digitize your individualism with 100%
               custom web designs! From simple static websites like this one
@@ -213,7 +216,7 @@
 
       <section class="resume">
         <div class="row">
-          <div class="col-9 experience">
+          <div class="experience" data-col="9">
             <h1>Experience</h1>
             <ul>
               <li>
@@ -265,44 +268,52 @@
               </li>
             </ul>
           </div>
-          <div class="col-3 information">
+          <div class="information" data-col="3">
             <h1>Information</h1>
-            <h3>Contact</h3>
-            <ul class="contact">
-              <li><span class="tr-icon-mail-alt"></span><a href="mailto:taprootcoding@gmail.com" target="_blank">tapRootCoding@gmail.com</a></li>
-              <li><span class="tr-icon-linkedin-circled"></span><a href="https://linkedin.com/in/ian-kuzmik" target="_blank">linkedin.com/in/ian-kuzmik</a></li>
-              <li><span class="tr-icon-twitter-circled"></span><a href="https://twitter.com/taprootcoding" target="_blank">twitter.com/tapRootCoding</a></li>
-              <li><span class="tr-icon-github"></span><a href="https://github.com/iankuzmik" target="_blank">github.com/IanKuzmik</a></li>
-            </ul>
-            <h3>Skills</h3>
-              <ul>
-                <li>HTML - CSS - Javascript - PHP</li>
-                <li>Bootstrap - Sass - jQuery</li>
-                <li>WordPress - Theme/Plugin Development</li>
-                <li>GitHub - Affinity Photo</li>
-                <li>Familiar With: Swift - MySQL - Python - Java</li>
-              </ul>
-            <h3>Education</h3>
-              <ul>
-                <li>Tulane University: BA - English (2015)</li>
-                <li>TEFL Certification</li>
-              </ul>
-            <h3>Additional Life Skills</h3>
-              <ul>
-                <li>Communication</li>
-                <li>Foraging</li>
-                <li>Customer Service</li>
-                <li>Shepherding</li>
-                <li>Detail Oriented</li>
-                <li>Microsoft Word</li>
-              </ul>
+            <div class="information-container">
+              <div class="contact">
+                <h3>Contact</h3>
+                <ul class="contact">
+                  <li><span class="tr-icon-mail-alt"></span><a href="mailto:taprootcoding@gmail.com" target="_blank">tapRootCoding@gmail.com</a></li>
+                  <li><span class="tr-icon-linkedin-circled"></span><a href="https://linkedin.com/in/ian-kuzmik" target="_blank">linkedin.com/in/ian-kuzmik</a></li>
+                  <li><span class="tr-icon-twitter-circled"></span><a href="https://twitter.com/taprootcoding" target="_blank">twitter.com/tapRootCoding</a></li>
+                  <li><span class="tr-icon-github"></span><a href="https://github.com/iankuzmik" target="_blank">github.com/IanKuzmik</a></li>
+                </ul>
+              </div>
+              <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                  <li>HTML - CSS - Javascript - PHP</li>
+                  <li>Bootstrap - Sass - jQuery</li>
+                  <li>WordPress - Theme/Plugin Development</li>
+                  <li>GitHub - Affinity Photo</li>
+                  <li>Familiar With: Swift - MySQL - Python - Java</li>
+                </ul>
+              </div>
+              <div class="education">
+                <h3>Education</h3>
+                <ul>
+                  <li>Tulane University: BA - English (2015)</li>
+                  <li>TEFL Certification</li>
+                </ul>
+              </div>
+              <div class="life-skills">
+                <h3>Additional Life Skills</h3>
+                <ul>
+                  <li>Communication</li>
+                  <li>Foraging</li>
+                  <li>Customer Service</li>
+                  <li>Shepherding</li>
+                  <li>Detail Oriented</li>
+                  <li>Microsoft Word</li>
+                </ul>
+              </div>
+            </div>
           </div>
-
         </div>
       </section>
 
     </main>
-
   </body>
 
   <footer>
@@ -311,6 +322,7 @@
       <p class="email">Contact: <a href="mailto:taprootcoding@gmail.com" target="_blank">tapRootCoding@gmail.com</a></p>
     </div>
   </footer>
+
   <script type="text/javascript" src="js/script.js"></script>
 
 </html>
