@@ -642,17 +642,21 @@ footer .bottom-bar a:hover, footer .bottom-bar a:focus {
     display: none;
   }
 
-  .resume .information-container {
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 50px;
-  }
-
   .portfolio-container {
     grid-template-columns: 1fr;
   }
 
   .portfolio-item p {
     padding: 0 15%;
+  }
+
+  .resume .information-container {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+
+  .resume .information span {
+    display: unset;
   }
 }
 
