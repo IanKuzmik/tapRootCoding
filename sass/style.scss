@@ -67,21 +67,46 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   box-shadow: 2px 15px 20px rgba(0,0,0,0.3);
 }
 .sticky-header {
-  display: none;
+  display: flex;
   position: sticky;
+  position: -webkit-sticky;
   color: $tr-green;
   top: 0;
-  height: 50px;
-  opacity: 0.9;
+  height: 0px;
+  opacity: 0;
   z-index: 1000;
   align-items: center;
   padding: 0 20px;
+  @include transition( all, 0.4s );
   p { font-weight: 800; }
-  &.reveal { display: flex; }
+  &.reveal { opacity: 0.9; height: 50px; }
 }
-
-.profile-picture.header { width: 40px; margin-left: 10px; border-width: 1px; opacity: 0; @include transition( opacity, 0.4s ); }
-.profile-picture.header.reveal { opacity: 1; }
+.sticky-header .profile-picture { 
+  width: 40px; 
+  margin-left: 10px; 
+  border-width: 1px; 
+  opacity: 0; 
+  @include transition( all, 0.4s );
+  &:hover, &:focus { 
+    filter: brightness(0.7); 
+    border-color: $tr-green;
+    animation-name: circle-wiggle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  } 
+  &.reveal { opacity: 1; }
+}
+.sticky-header nav { margin-left: 10px; }
+.sticky-header .nav-link { 
+  color: $tr-green;
+  margin: auto 5px;
+  text-decoration: none;
+  @include transition( color, 0.4s );
+  font-weight: 800;
+  &:hover, &:focus { color: $tr-blue; }
+ }
 .sticky-header .external-links { margin-left: auto; }
 .external-links span { color: $tr-green; @include transition( all, 0.4s ); &:hover,&:focus { color: $tr-blue; } }
 .hero {
@@ -95,45 +120,25 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .hero-bg-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.3; width: 120% }
 .hero h1 { font-size: 2.5em; color: $tr-blue; }
 .hero h2 { font-size: 1.5em; color: $tr-green; font-weight: 500; opacity: 0.6; }
-// quick bio
-.quick-bio { margin-bottom: 50px;}
-.quick-bio .row { align-items: center; justify-content: center; }
-.quick-bio .overlay {
+.hero .external-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 0;
   right: 0;
+  margin: 20px;
+  font-size: 1.5em;
   bottom: 0;
-  left: 0;
-  background-color: rgba(0,0,0,0.4);
-  color: rgba(255,255,255,0.4);
-  opacity: 0;
-  height: 310px;
-  width: 310px;
-  border-radius: 50%;
-  margin: 5px;
-  @include transition( border-radius, 1s );
-  &:hover, &:focus { opacity: 1; cursor: pointer; }
+  place-content: space-around;
 }
-.quick-bio .overlay p { opacity: 0.5; font-weight: 600; }
-.profile-picture-container { position: relative; }
+// quick bio
+.quick-bio { margin-bottom: 50px;}
+.quick-bio .row { align-items: center; justify-content: center; }
 .profile-picture {
   @include transition( border-radius, 1s );
   border-radius: 50%;
   border: 5px $tr-silver solid;
   box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
-}
-.quick-bio .overlay.animate,
-.profile-picture.animate {
-  @include transition( opacity, 0.4s );
-  border-color: $tr-green;
-  animation-name: circle-wiggle;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
 }
 .quick-bio h1 { color: $tr-silver; }
 .quick-bio p { color: white; font-weight: 100; font-size: 1.2em; }
@@ -166,17 +171,9 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .my-services .row.right .card { @include gradient( 45deg, $tr-silver, 20%, rgb(255,255,255), 100% ) }
 .my-services .card h3 { text-decoration: underline;}
 .my-services .card p { font-weight: 600; font-size: 1em; padding: 0 15%; }
-.my-services span {
-  color: $tr-green;
-  width: 30%;
-  position: relative;
- }
-.my-services span::before {
-  position: absolute;
-  transform: scale(12);
-  top: 50%;
-  left: 70%;
-}
+.my-services .row .card.slide-in { transform: translateX(0%); opacity: 1; }
+.my-services span { color: $tr-green; width: 30%; position: relative; }
+.my-services span::before { position: absolute; transform: scale(12); top: 50%; left: 70%; }
 .my-services .row.right span::before { left: unset; right: 70%; }
 .my-services-outro p { color: white; margin: 50px 0 20px 20px; font-weight: 500; font-size: 1.1em; }
 //portfolio
@@ -213,4 +210,27 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .resume .information ul li { margin: 2px 0; }
 .resume .information span { margin-right: 5px; }
 
-footer { height: 300px; background-color: $tr-silver; }
+// footer { position: relative; height: 300px; background-color: $tr-silver; }
+footer { position: relative; }
+footer .bottom-bar {
+  background-color: $tr-blue;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  right: 0;
+  padding: 0 30px;
+  height: 30px;
+  font-family: $tr-sans;
+  font-size: 0.8em;
+  color: $tr-silver; 
+}
+footer .bottom-bar .email { margin-left: auto; } 
+footer .bottom-bar a { 
+  color: $tr-silver; 
+  text-decoration: none;
+  @include transition( color, 0.4s );
+  &:hover, &:focus { color: $tr-green }
+ }

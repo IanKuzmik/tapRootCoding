@@ -1,6 +1,10 @@
 
+const stickyHeader      = document.getElementById('js-sticky-header');
+const headerProfilePic  = document.getElementById('js-header-profile-picture');
+const profilePic        = document.getElementById('js-bio-profile-picture');
+const cards             = document.querySelectorAll('.my-services .card');
+
 //sticky header
-const stickyHeader = document.getElementById('js-sticky-header');
 document.addEventListener( 'scroll', function() {
   if ( window.pageYOffset > 300 ) {
     stickyHeader.classList.add('reveal');
@@ -9,20 +13,7 @@ document.addEventListener( 'scroll', function() {
   }
 });
 
-//profile pic hover effect
-const profilePic = document.getElementById('js-bio-profile-picture');
-const profilePicOverlay = document.getElementById('js-profile-picture-overlay');
-profilePicOverlay.addEventListener( 'mouseover', function() {
-  profilePicOverlay.classList.add('animate');
-  profilePic.classList.add('animate');
-});
-profilePicOverlay.addEventListener("mouseout", function() {
-  profilePicOverlay.classList.remove('animate');
-  profilePic.classList.remove('animate');
-});
-
 //profile pic header
-const headerProfilePic = document.getElementById('js-header-profile-picture');
 window.addEventListener( 'scroll', function() {
   let ele = profilePic.getBoundingClientRect();
   if ( (ele.y + ele.height) < 0 ) {
@@ -32,9 +23,7 @@ window.addEventListener( 'scroll', function() {
   }
 });
 
-
 //card slide into view
-const cards = document.querySelectorAll('.my-services .card');
 const observerOptions = {
   threshold  : 0,
   rootMargin : '0px 0px -250px 0px'
@@ -43,7 +32,7 @@ const cardObserver = new IntersectionObserver( (entries, imgObserver) => {
   entries.forEach( entry => {
     if ( !entry.isIntersecting ) return;
     let list = entry.target.parentElement.querySelector('.list');
-    entry.target.setAttribute( 'style', 'transform: translateX(0%); opacity: 1;');
+    entry.target.classList.add('slide-in');
     setTimeout( function() { list.style.opacity = 1; }, 800 );
     imgObserver.unobserve(entry.target);
   })
