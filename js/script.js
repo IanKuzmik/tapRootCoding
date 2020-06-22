@@ -32,17 +32,17 @@ const observerOptions = {
   threshold  : 0,
   rootMargin : '0px 0px -250px 0px'
 };
-const cardObserver = new IntersectionObserver( (entries, imgObserver) => {
+const cardObserver = new IntersectionObserver( (entries, cardObserver) => {
   entries.forEach( entry => {
     if ( !entry.isIntersecting ) return;
     let list = entry.target.parentElement.querySelector('.list');
     entry.target.classList.add('slide-in');
-    setTimeout( function() { list.style.opacity = 1; }, 800 );
-    imgObserver.unobserve(entry.target);
+    setTimeout( function() { list.classList.add('reveal') }, 800 );
+    cardObserver.unobserve(entry.target);
   })
 }, observerOptions );
-cards.forEach( (image) => {
-  cardObserver.observe(image);
+cards.forEach( (card) => {
+  cardObserver.observe(card);
 });
 
 //responsive 

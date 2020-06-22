@@ -146,6 +146,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .my-services .row.right { justify-content: flex-end; .card {@include transform( translateX(100%) )} }
 .my-services .row.right .list { text-align: right; }
 .my-services .list { display: flex; flex-direction: column; align-self: center; opacity: 0; @include transition( all, 0.4s ); }
+.my-services .list.reveal { opacity: 1; }
 .my-services .list h2 { color: $tr-silver; }
 .my-services .list ul { list-style-type: none; padding: 0; }
 .my-services .list li { color: white; font-weight: 600; font-size: 1em; margin: 20px 0; }

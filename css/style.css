@@ -324,6 +324,10 @@ hr {
   transition: all 0.4s ease;
 }
 
+.my-services .list.reveal {
+  opacity: 1;
+}
+
 .my-services .list h2 {
   color: #CCD0DE;
 }
