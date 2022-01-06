@@ -120,9 +120,9 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   padding-top: 80px;
   margin-bottom: 50px;
   overflow: hidden;
-  box-shadow: 2px 15px 20px rgba(0,168,14,0.3);
+  box-shadow: 2px 15px 20px rgba(0,168,14,0.15);
 }
-.hero-bg-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.1; width: 120% }
+.hero-bg-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.15; width: 120% }
 .hero-logo-image { position: relative; top: -100px; width: 30%;}
 .hero h1 { position: relative; top: -150px; font-weight: 100; color: $tr-green; }
 .hero .external-links {
@@ -216,7 +216,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 
 footer { position: relative; }
 footer .bottom-bar {
-  background-color: $tr-blue;
+  background-color: $tr-black;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -228,14 +228,14 @@ footer .bottom-bar {
   height: 30px;
   font-family: $tr-sans;
   font-size: 0.8em;
-  color: $tr-silver; 
+  color: $tr-green; 
 }
 footer .bottom-bar .email { margin-left: auto; } 
 footer .bottom-bar a { 
-  color: $tr-silver; 
+  color: $tr-white; 
   text-decoration: none;
   @include transition( color, 0.4s );
-  &:hover, &:focus { color: $tr-green }
+  &:hover, &:focus { color: $tr-orange; opacity: 0.8; }
  }
 //responsive
  @media only screen and (max-width: 992px) {
