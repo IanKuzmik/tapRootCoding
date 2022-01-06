@@ -1,7 +1,10 @@
 /* Variables */
 $tr-blue: #214484;
 $tr-silver: #CCD0DE;
-$tr-green: #569B00;
+$tr-green: #00a80e;
+$tr-black: #010101;
+$tr-white: #ffffff; 
+$tr-orange: #ff7300;
 $tr-mono: 'Consolas', monospace;
 $tr-sans: 'Roboto', sans-serif;
 
@@ -43,11 +46,11 @@ $tr-sans: 'Roboto', sans-serif;
 /* Main */
 //general
 html { scroll-behavior: smooth; }
-body { margin: 0;  @include gradient( 180deg, $tr-blue, 20%, $tr-silver, 100% );}
+body { margin: 0;  @include gradient( 180deg, $tr-black, 20%, $tr-white, 100% );}
 section { margin: 0 15px; }
 h1, h2, h3, h4 { font-family: $tr-mono; }
 p, li { font-family: $tr-sans; letter-spacing: 0.02em; line-height: 1.2em; }
-a.tr-link { color: $tr-silver; font-weight: 600; @include transition( color, 0.4s ); text-decoration: underline $tr-green; &:hover, &:focus { color: $tr-green; } }
+a.tr-link { color: $tr-green; font-weight: 600; @include transition( color, 0.4s ); text-decoration: underline $tr-green; &:hover, &:focus { color: $tr-orange; opacity: 0.8; } }
 hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include double-gradient( 270deg, rgba(0, 0, 0, 0), 0%, $tr-green, 50%, rgba(0, 0, 0, 0), 100% ); }
 .row { display: flex; }
 [data-col] { padding: 5px; }
@@ -60,12 +63,11 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 [data-col="10"] { width: calc(100%/1.2); }
 [data-col="12"] { width: 100%; }
 .font-mono { font-family: $tr-mono; }
-.profile-picture { border-radius: 50%; border: 5px $tr-silver solid; box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); }
+.profile-picture { border-radius: 50%; border: 5px $tr-green solid; box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); }
 //header
 .hero, .sticky-header {
-  background-color: $tr-silver;
+  background-color: $tr-black;
   font-family: $tr-mono;
-  box-shadow: 2px 15px 20px rgba(0,0,0,0.3);
 }
 .sticky-header {
   display: flex;
@@ -78,6 +80,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   z-index: 1000;
   align-items: center;
   padding: 0 20px;
+  box-shadow: 2px 15px 20px rgba(255,255,255,0.3);
   @include transition( all, 0.4s );
   p { font-weight: 800; }
   &.reveal { opacity: 0.9; height: 50px; }
@@ -90,7 +93,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   @include transition( all, 0.4s );
   &:hover, &:focus { 
     filter: brightness(0.7); 
-    border-color: $tr-green;
+    border-color: $tr-orange;
     animation-name: circle-wiggle;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -106,10 +109,10 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   text-decoration: none;
   @include transition( color, 0.4s );
   font-weight: 800;
-  &:hover, &:focus { color: $tr-blue; }
+  &:hover, &:focus { color: $tr-orange; opacity: 0.8; }
  }
 .sticky-header .external-links { margin-left: auto; }
-.external-links span { color: $tr-green; @include transition( all, 0.4s ); &:hover,&:focus { color: $tr-blue; } }
+.external-links span { color: $tr-green; @include transition( all, 0.4s ); &:hover,&:focus { color: $tr-orange; opacity: 0.8; } }
 .hero {
   position: relative;
   height: 250px;
@@ -117,10 +120,11 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   padding-top: 80px;
   margin-bottom: 50px;
   overflow: hidden;
+  box-shadow: 2px 15px 20px rgba(0,168,14,0.3);
 }
-.hero-bg-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.3; width: 120% }
-.hero h1 { font-size: 2.5em; color: $tr-blue; }
-.hero h2 { font-size: 1.5em; color: $tr-green; font-weight: 500; opacity: 0.6; }
+.hero-bg-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.1; width: 120% }
+.hero-logo-image { position: relative; top: -100px; width: 30%;}
+.hero h1 { position: relative; top: -150px; font-weight: 100; color: $tr-green; }
 .hero .external-links {
   display: flex;
   flex-direction: column;
@@ -136,12 +140,12 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .quick-bio { margin-bottom: 50px;}
 .quick-bio .row { align-items: center; justify-content: center; }
 .quick-bio .profile-picture { width: 90%; max-width: 280px; }
-.quick-bio h1 { color: $tr-silver; }
-.quick-bio p { color: white; font-weight: 100; font-size: 1.2em; }
+.quick-bio h1 { color: $tr-green; }
+.quick-bio p { color: $tr-white; font-weight: 100; font-size: 1.2em; }
 //services
 .my-services-intro { display: block; text-align: center; margin-bottom: 50px;}
 .my-services-intro h2 { color: $tr-silver; }
-.my-services-intro p { color: white; margin: 0 150px; font-weight: 500; font-size: 1.1em; }
+.my-services-intro p { color: $tr-white; margin: 0 150px; font-weight: 500; font-size: 1.1em; }
 .my-services { color: $tr-blue; overflow: hidden;}
 .my-services .row.right { justify-content: flex-end; .card {@include transform( translateX(100%) )} }
 .my-services .row.right .list { text-align: right; }
@@ -149,7 +153,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .my-services .list.reveal { opacity: 1; }
 .my-services .list h2 { color: $tr-silver; }
 .my-services .list ul { list-style-type: none; padding: 0; }
-.my-services .list li { color: white; font-weight: 600; font-size: 1em; margin: 20px 0; }
+.my-services .list li { color: $tr-white; font-weight: 600; font-size: 1em; margin: 20px 0; }
 .my-services .card {
   display: flex;
   flex-flow: column;
@@ -197,7 +201,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .resume .experience { margin-bottom: 50px;  }
 .resume .experience h4 { text-decoration: underline; margin-left: 15px; }
 .resume .experience p { margin: 0 15px; }
-.resume .information { border-left: $tr-silver 3px solid; padding-left: 15px; }
+.resume .information { border-left: $tr-white 3px solid; padding-left: 15px; }
 .resume .information-container { display: grid; grid-template-columns: 1fr; }
 .resume .information ul { margin-bottom: 10px; padding-inline-start: 15px; }
 .resume .information ul.contact { padding: 0; list-style-type: none; }
