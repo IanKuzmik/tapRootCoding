@@ -1,6 +1,4 @@
 /* Variables */
-$tr-blue: #214484;
-$tr-silver: #CCD0DE;
 $tr-green: #00a80e;
 $tr-black: #010101;
 $tr-white: #ffffff; 
@@ -75,6 +73,7 @@ button {
   margin: 3px;
   &:hover, &:focus { border-color: $tr-green; color: $tr-orange; transform: scale(0.9); cursor: pointer; }
 }
+
 //header
 .hero, .sticky-header {
   background-color: $tr-black;
@@ -147,54 +146,20 @@ button {
   bottom: 0;
   place-content: space-around;
 }
+
 // quick bio
 .quick-bio { margin-bottom: 50px;}
 .quick-bio .row { align-items: center; justify-content: center; }
 .quick-bio .profile-picture { width: 90%; max-width: 280px; }
 .quick-bio h1 { color: $tr-green; }
 .quick-bio p { color: $tr-white; font-weight: 100; font-size: 1.2em; }
-//services
-.my-services-intro { display: block; text-align: center; margin-bottom: 50px;}
-.my-services-intro h2 { color: $tr-silver; }
-.my-services-intro p { color: $tr-white; margin: 0 150px; font-weight: 500; font-size: 1.1em; }
-.my-services { color: $tr-blue; overflow: hidden;}
-.my-services .row.right { justify-content: flex-end; .card {@include transform( translateX(100%) )} }
-.my-services .row.right .list { text-align: right; }
-.my-services .list { display: flex; flex-direction: column; align-self: center; opacity: 0; @include transition( all, 0.4s ); }
-.my-services .list.reveal { opacity: 1; }
-.my-services .list h2 { color: $tr-silver; }
-.my-services .list ul { list-style-type: none; padding: 0; }
-.my-services .list li { color: $tr-white; font-weight: 600; font-size: 1em; margin: 20px 0; }
-.my-services .card {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 350px;
-  width: 35%;
-  margin: 15px 50px;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
-  opacity: 0;
-  @include gradient( 315deg, $tr-silver, 20%, rgb(255,255,255), 100% );
-  @include transition( all, 0.8s );
-  @include transform( translateX(-100%) )
-}
-.my-services .row.right .card { @include gradient( 45deg, $tr-silver, 20%, rgb(255,255,255), 100% ) }
-.my-services .card h3 { text-decoration: underline;}
-.my-services .card span { display: none; color: $tr-blue; font-size: 2em; }
-.my-services .card p { font-weight: 600; font-size: 1em; padding: 0 15%; }
-.my-services .row .card.slide-in { transform: translateX(0%); opacity: 1; }
-.my-services .big-icon { color: $tr-green; width: 30%; position: relative; }
-.my-services .big-icon::before { position: absolute; transform: scale(12); top: 50%; left: 70%; text-shadow: none; }
-.my-services .row.right .big-icon::before { left: unset; right: 70%; }
-.my-services-outro p { color: white; margin: 50px 0 20px 20px; font-weight: 500; font-size: 1.1em; }
+
 //portfolio
 .portfolio h1 { margin: 5px 0; text-decoration: underline; color: $tr-green; }
 .portfolio p { color: $tr-white; }
 .portfolio-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px 5%; margin: 50px 10px; }
 .portfolio-item { width: 100%; text-align: center; }
-.portfolio-item img { border-radius: 10px; border: 5px $tr-silver solid; width: 280px; height: 200px; }
+.portfolio-item img { border-radius: 10px; border: 5px $tr-white solid; width: 280px; height: 200px; }
 .portfolio-item p { height: 80px; }
 div.scratch-dropdown-container { 
   position: relative; 
@@ -239,6 +204,7 @@ div.scratch-dropdown a {
 .resume .information ul li { margin: 2px 0; }
 .resume .information span { margin-right: 5px; }
 
+// footer
 footer { position: relative; }
 footer .bottom-bar {
   background-color: $tr-black;
@@ -262,6 +228,7 @@ footer .bottom-bar a {
   @include transition( color, 0.4s );
   &:hover, &:focus { color: $tr-orange; opacity: 0.8; }
  }
+
 //responsive
  @media only screen and (max-width: 992px) {
   .hero-bg-image { width: unset; }
