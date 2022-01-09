@@ -119,6 +119,27 @@ hr {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+button {
+  font-family: "Consolas", monospace;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 3px #ffffff solid;
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin: 3px;
+}
+button:hover, button:focus {
+  border-color: #00a80e;
+  color: #ff7300;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
 .hero, .sticky-header {
   background-color: #010101;
   font-family: "Consolas", monospace;
@@ -431,6 +452,11 @@ hr {
 .portfolio h1 {
   margin: 5px 0;
   text-decoration: underline;
+  color: #00a80e;
+}
+
+.portfolio p {
+  color: #ffffff;
 }
 
 .portfolio-container {
@@ -456,38 +482,40 @@ hr {
   height: 80px;
 }
 
-.portfolio-item button {
-  font-family: "Consolas", monospace;
-  font-size: 1.2em;
+div.scratch-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+div.scratch-dropdown-container:hover div.scratch-dropdown, div.scratch-dropdown-container:focus div.scratch-dropdown {
+  display: block;
+}
+
+div.scratch-dropdown {
+  display: none;
+  position: absolute;
+  border: 3px #00a80e solid;
   border-radius: 10px;
-  border: 3px #CCD0DE solid;
-  background-color: transparent;
-  color: #CCD0DE;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
+}
+
+div.scratch-dropdown a {
+  color: #00a80e;
+  padding: 12px 16px;
+  font-family: "Consolas", monospace;
+  display: block;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  margin: 3px;
 }
-.portfolio-item button:hover, .portfolio-item button:focus {
-  border-color: #00a80e;
-  color: black;
-  transform: scale(0.9);
-  cursor: pointer;
-}
-
-.print-resume {
-  color: black;
-  font-size: 1.2em;
-  -webkit-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-  -o-transition: color 0.4s ease;
-  transition: color 0.4s ease;
-}
-.print-resume:hover, .print-resume:focus {
-  color: #00a80e;
+div.scratch-dropdown a:hover, div.scratch-dropdown a:focus {
+  color: #ff7300;
 }
 
 .resume h1 {
@@ -497,6 +525,10 @@ hr {
 
 .resume .experience {
   margin-bottom: 50px;
+}
+
+.resume .experience a {
+  filter: brightness(0.8);
 }
 
 .resume .experience h4 {
@@ -538,7 +570,8 @@ hr {
   transition: color 0.4s ease;
 }
 .resume .information ul.contact a:hover, .resume .information ul.contact a:focus {
-  color: #00a80e;
+  color: #ff7300;
+  opacity: 0.8;
 }
 
 .resume .information ul li {

@@ -64,6 +64,17 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 [data-col="12"] { width: 100%; }
 .font-mono { font-family: $tr-mono; }
 .profile-picture { border-radius: 50%; border: 5px $tr-green solid; box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19); }
+button {
+  font-family: $tr-mono;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 3px $tr-white solid;
+  background-color: transparent;
+  color: $tr-white;
+  @include transition( all, 0.4s );
+  margin: 3px;
+  &:hover, &:focus { border-color: $tr-green; color: $tr-orange; transform: scale(0.9); cursor: pointer; }
+}
 //header
 .hero, .sticky-header {
   background-color: $tr-black;
@@ -179,26 +190,40 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
 .my-services .row.right .big-icon::before { left: unset; right: 70%; }
 .my-services-outro p { color: white; margin: 50px 0 20px 20px; font-weight: 500; font-size: 1.1em; }
 //portfolio
-.portfolio h1 { margin: 5px 0; text-decoration: underline; }
+.portfolio h1 { margin: 5px 0; text-decoration: underline; color: $tr-green; }
+.portfolio p { color: $tr-white; }
 .portfolio-container { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px 5%; margin: 50px 10px; }
 .portfolio-item { width: 100%; text-align: center; }
 .portfolio-item img { border-radius: 10px; border: 5px $tr-silver solid; width: 280px; height: 200px; }
 .portfolio-item p { height: 80px; }
-.portfolio-item button {
-  font-family: $tr-mono;
-  font-size: 1.2em;
-  border-radius: 10px;
-  border: 3px $tr-silver solid;
-  background-color: transparent;
-  color: $tr-silver;
-  @include transition( all, 0.4s );
-  margin: 3px;
-  &:hover, &:focus { border-color: $tr-green; color: black; transform: scale(0.9); cursor: pointer; }
+div.scratch-dropdown-container { 
+  position: relative; 
+  display: inline-block;
+  &:hover div.scratch-dropdown, &:focus div.scratch-dropdown { display: block; }
 }
+div.scratch-dropdown {
+  display: none;
+  position: absolute;
+  border: 3px $tr-green solid;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  @include gradient( 180deg, rgba(0,0,0,0.5), 0%, rgba(0,0,0,1), 100% );
+}
+div.scratch-dropdown a {
+  color: $tr-green;
+  padding: 12px 16px;
+  font-family: $tr-mono;
+  display: block;
+  @include transition( all, 0.4s );
+  &:hover, &:focus { color:$tr-orange }
+}
+
 //resume
-.print-resume { color: black; font-size: 1.2em; @include transition ( color, 0.4s ); &:hover, &:focus { color: $tr-green; } }
-.resume h1 { margin: 5px 0; text-decoration: underline;}
-.resume .experience { margin-bottom: 50px;  }
+.resume h1 { margin: 5px 0; text-decoration: underline; }
+.resume .experience { margin-bottom: 50px; }
+.resume .experience a { filter: brightness(0.8); }
 .resume .experience h4 { text-decoration: underline; margin-left: 15px; }
 .resume .experience p { margin: 0 15px; }
 .resume .information { border-left: $tr-white 3px solid; padding-left: 15px; }
@@ -209,7 +234,7 @@ hr {  width: 80%; margin-bottom: 50px; height: 2px; border: none; @include doubl
   color: rgba(0,0,0,0.8);
   font-weight: 100;
   @include transition( color, 0.4s );
-  &:hover, &:focus { color: $tr-green; }
+  &:hover, &:focus { color: $tr-orange; opacity: 0.8; }
 }
 .resume .information ul li { margin: 2px 0; }
 .resume .information span { margin-right: 5px; }
