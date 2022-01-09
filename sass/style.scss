@@ -231,6 +231,7 @@ footer .bottom-bar a {
 
 //responsive
  @media only screen and (max-width: 992px) {
+  .hero-logo-image { width: 40%; }
   .hero-bg-image { width: unset; }
   .portfolio-container { grid-template-columns: 1fr 1fr; }
   .my-services span { display: none; }
@@ -242,6 +243,7 @@ footer .bottom-bar a {
   .resume .information span { display: block; margin-top: 10px; }
  }
  @media only screen and (max-width: 768px) {
+  .hero-logo-image { width: 50%; }
   .hero .external-links { flex-direction: row; top: unset; left: 0; }
   .quick-bio .row, .resume .row { display: block; }
   .quick-bio div { margin: auto; }
@@ -252,7 +254,4 @@ footer .bottom-bar a {
   .portfolio-item p { padding: 0 15%; }
   .resume .information-container { grid-template-columns: 1fr 1fr; margin-bottom: 50px;  }
   .resume .information span { display: unset; }
- }
-
- @media only screen and (max-width: 0px) {
  }
