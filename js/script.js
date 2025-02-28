@@ -1,11 +1,17 @@
 
-const stickyHeader        = document.getElementById('js-sticky-header');
-const headerProfilePic    = document.getElementById('js-header-profile-picture');
-const profilePicContainer = document.querySelector('.profile-picture-container');
-const profilePic          = document.getElementById('js-bio-profile-picture');
-const quickBioText        = document.querySelector('.quick-bio-text');
-const resumeExperience    = document.querySelector('.resume .experience');
-const resumeInformation   = document.querySelector('.resume .information');
+const stickyHeader              = document.getElementById('js-sticky-header');
+const headerProfilePic          = document.getElementById('js-header-profile-picture');
+const profilePicContainer       = document.querySelector('.profile-picture-container');
+const profilePic                = document.getElementById('js-bio-profile-picture');
+const quickBioText              = document.querySelector('.quick-bio-text');
+const oldPortfolio              = document.querySelector('.old-portfolio');
+const oldPortfolioBar           = document.querySelector('.old-portfolio-title-bar');
+const oldPortfolioBarArrowOpen  = document.querySelector('.old-portfolio-title-bar-arrow-open');
+const oldPortfolioBarArrowClose = document.querySelector('.old-portfolio-title-bar-arrow-close');
+const oldPortfolioMql4Link      = document.getElementById('old-portfolio-mql4-link');
+const oldPortfolioMql4Ele       = document.getElementById('old-portfolio-mql4-div');
+const resumeExperience          = document.querySelector('.resume .experience');
+const resumeInformation         = document.querySelector('.resume .information');
 
 //sticky header
 document.addEventListener( 'scroll', function() {
@@ -26,6 +32,33 @@ window.addEventListener( 'scroll', function() {
   }
 });
 
+//old portfolio
+function toggleOldPortfolio() {
+  if (oldPortfolio.classList.contains('old-portfolio--open')) {
+    oldPortfolio.classList.remove('old-portfolio--open');
+    oldPortfolioBarArrowOpen.classList.remove('hide');
+    oldPortfolioBarArrowClose.classList.add('hide');
+  } else {
+    oldPortfolio.classList.add('old-portfolio--open');
+    oldPortfolioBarArrowOpen.classList.add('hide');
+    oldPortfolioBarArrowClose.classList.remove('hide');
+  }
+}
+
+oldPortfolioBar.onclick = toggleOldPortfolio;
+
+oldPortfolioMql4Link.onclick = function() {
+
+  if (oldPortfolio.classList.contains('old-portfolio--open')) {
+    oldPortfolioMql4Ele.scrollIntoView({alignToTop: true});
+  } else {
+    toggleOldPortfolio();
+    setTimeout(function () {
+      oldPortfolioMql4Ele.scrollIntoView({alignToTop: true});
+    }, 300);
+  }
+
+}
 
 //responsive 
 function isBreakPoint( breakPoint, specific = false, breakPoints = [576, 768, 992] ) {

@@ -9,7 +9,7 @@
    <meta property="og:title" content="Ian Kuzmik" >
    <meta property="og:description" content="My personal resume website" >
    <meta property="og:url" content="https://iankuzmik.taprootcoding.com" >
-   <meta property="og:image" content="img/portfolio-taproot.png" >
+   <meta property="og:image" content="img/portfolio-taproot.webp" >
    <link rel="icon" type="image/x-icon" href="img/carrot.ico">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/tap-root-font-icon.css">
@@ -23,29 +23,25 @@
 
       <div id="js-sticky-header" class="sticky-header">
         <p class='logo-temp'><span class="font-mono">tap</span>Root</p>
-        <a href="#quick-bio-anchor"><img id="js-header-profile-picture" class="profile-picture" src="img/profile-pic.png" alt="Profile Picture"></a>
+        <a href="#quick-bio-anchor"><img id="js-header-profile-picture" class="profile-picture" src="img/profile-pic.webp" alt="Profile Picture"></a>
         <nav>
           <a class="nav-link" href="#portfolio-anchor">Portfolio</a>
           <a class="nav-link" href="#resume-anchor">Resume</a>
         </nav>
         <div class="external-links">
           <a href="mailto:taprootcoding@gmail.com" target="_blank"><span class="tr-icon-mail-alt"></span></a>
-          <a href="https://www.instagram.com/taproot.coding/" target="_blank"><span class="tr-icon-instagram-filled"></span></a>
           <a href="https://www.youtube.com/channel/UCXNQtBHYVZi2fNfFmCgarDQ" target="_blank"><span class="tr-icon-youtube-play"></span></a>
-          <a href="https://twitter.com/taprootcoding" target="_blank"><span class="tr-icon-twitter"></span></a>
           <a href="https://github.com/iankuzmik" target="_blank"><span class="tr-icon-github"></span></a>
         </div>
       </div>
 
       <div class="hero">
-        <img class="hero-bg-image" src="img/cj-crop.jpg" alt="">
-        <img class="hero-logo-image" src="img/tapRoot-logo.png" alt="tapRoot Logo">
+        <img class="hero-bg-image" src="img/cj-crop.webp" alt="">
+        <img class="hero-logo-image" src="img/tapRoot-logo.webp" alt="tapRoot Logo">
         <h1>Resume: Ian Kuzmik</h1>
         <div class="external-links">
           <a href="mailto:taprootcoding@gmail.com" target="_blank"><span class="tr-icon-mail-alt"></span></a>
-          <a href="https://www.instagram.com/taproot.coding/" target="_blank"><span class="tr-icon-instagram-filled"></span></a>
           <a href="https://www.youtube.com/channel/UCXNQtBHYVZi2fNfFmCgarDQ" target="_blank"><span class="tr-icon-youtube-play"></span></a>
-          <a href="https://twitter.com/taprootcoding" target="_blank"><span class="tr-icon-twitter"></span></a>
           <a href="https://github.com/iankuzmik" target="_blank"><span class="tr-icon-github"></span></a>
         </div>
       </div>
@@ -54,14 +50,15 @@
       <section class="quick-bio">
         <div class="row">
           <div class="profile-picture-container" data-col="4"> 
-            <img id="js-bio-profile-picture" class="profile-picture" src="img/profile-pic.png" alt="Profile Picture">
+            <img id="js-bio-profile-picture" class="profile-picture" src="img/profile-pic.webp" alt="Profile Picture">
           </div>
           <div class="quick-bio-text" data-col="6">
             <h1>Hello,</h1>
             <p>
-              My name is Ian. I'm a teacher looking to pursue my passion for programming at the professional level. 
+              My name is Ian. I'm an IT professional looking to advance my career and pursue my passion for programming. 
+              <br><br>
               tapRoot Coding is a name that embodies my love of both coding and nature, a business name that I have 
-              contracted under, my social media pseudonym, and, most relevantly to this resume website, a domain name 
+              contracted under, a social media pseudonym, and, most relevantly to this resume website, a domain name 
               that I already owned. Below, you can find a <a class="tr-link" href="#portfolio-anchor">portfolio</a> of work I've done, and my official <a class="tr-link" href="#resume-anchor">resume</a>.
             </p>
             <p>Contact me at <a class="tr-link" href="mailto:kuzmik951@gmail.com" target="_blank">kuzmik951@gmail.com</a></p>
@@ -71,109 +68,148 @@
 
       <a name="portfolio-anchor"></a>
       <hr>
-
       <section class="portfolio">
         <h1>Portfolio</h1>
         <p>
           A selection of some of my programming work, everything from Web Development to Forex Trading to Tutorials for Kids. More small projects can be found 
           on my <a href="https://github.com/iankuzmik" class="tr-link" target="_blank">GitHub Profile</a>, and there are a few more links in my Resume as well.
         </p>
+
         <div class="portfolio-container">
           <div class="portfolio-item">
-            <img src="img/portfolio-xochis.png" alt="Xochis Apothecary Website">
-            <h1>Xochis Apothecary</h1>
-            <p>This WordPress site features a 100% custom theme, and utilizes BootStrap and jQeury. No longer in use, but I've saved a preview.</p>
-            <a href="https://xochis.taprootcoding.com/" target="_blank"><button type="button" name="button">Veiw Website</button></a>
-            <a href="https://github.com/iankuzmik/taproot-apothecary-theme" target="_blank"><button type="button" name="button">View Code</button></a>
+            <img src="img/portfolio-mql4-ea.webp" alt="MQL4 Forex Trading Bot">
+            <h1>MT4 Expert Advisor</h1>
+            <p>MetaTrader is a popular trading platform for the Forex market, and hosts a public marketplace for automated trading scripts/bots, or "Expert Advisors". This product builds off of code described in my <a class="tr-link"><span id="old-portfolio-mql4-link">MQL4 tutorial series</span></a>. </p>
+            <a href="https://www.mql5.com/en/market/product/129409" target="_blank"><button type="button" name="button">Veiw Description</button></a>
           </div>
           <div class="portfolio-item">
-            <img src="img/portfolio-taproot.png" alt="tapRootCoding Website">
-            <h1>tapRoot Coding</h1>
-            <p>Yes, this very website! I tried to be as simple and lightweight as possible while still delivering a dynamic UX. All code used for this site, minus Fontello font icons, is entirely my own.</p>
-            <a href="https://github.com/iankuzmik/taprootcoding" target="_blank"><button type="button" name="button">Veiw Code</button></a>
+            <img src="img/portfolio-js-chess.webp" alt="JavaScript Chess">
+            <h1>JavaScript Chess</h1>
+            <p>A simple chess web app leveraging the Stockfish engine. Play against the engine or train various openings, all with live analysis</p>
+            <a href="https://chess.taprootcoding.com/" target="_blank"><button type="button" name="button">Veiw App</button></a>
+            <a href="https://github.com/IanKuzmik/javascript_chess" target="_blank"><button type="button" name="button">Veiw Code</button></a>
           </div>
           <div class="portfolio-item">
-            <img src="img/portfolio-taproot-plugin.png" alt="tapRoot-Toolbox Plugin">
-            <h1>tapRoot-Toolbox</h1>
-            <p>A small WordPress plugin to add HTTP headers for better security on client websites.</p>
-            <a href="https://github.com/iankuzmik/tr-toolbox" target="_blank"><button type="button" name="button">Veiw Code</button></a>
+            <img src="img/portfolio-income-stock-screener.webp" alt="Income Stock Screener">
+            <h1>Income Stock Screener</h1>
+            <p>A Python script which utilizes the y-finance webscraping package to analyze stock options. Gives recomendations and manages basic portfolio data in a MySQL database</p>
+            <a href="https://github.com/IanKuzmik/income-stock-screener" target="_blank"><button type="button" name="button">Veiw Code</button></a>
           </div>
-          <div class="portfolio-item">
-            <img src="img/portfolio-mql4.png" alt="MQL4 Programs">
-            <h1>MQL4 Programs</h1>
-            <p>Indicators and Trading Bots written in MQL4 for my Youtube Tutorial series on MetaTrader4.</p>
-           <a href="https://github.com/IanKuzmik/mql4-lesson-source-code" target="_blank"><button type="button" name="button">Github</button></a>
-           <a href="https://www.youtube.com/playlist?list=PLb9YitM1XhXNnVjmm0ZjMxQoOxw0W8Vl5" target="_blank"><button type="button" name="button">YouTube</button></a>
-          </div>
-          <div class="portfolio-item">
-            <img src="img/portfolio-tradingView.png" alt="Pine Script Trading Bots">
-            <h1>Pine Script Trading Bots</h1>
-            <p>Three trading robots written in Pine Script for the TradingView platform. These were my first profitable scripts, geared towards the Crypto market.</p>
-           <a href="https://www.tradingview.com/u/tapRoot_coding/#published-scripts" target="_blank"><button type="button" name="button">TV Profile</button></a>
-          </div>
-          <div class="portfolio-item">
-            <img src="img/portfolio-scratch-mit.png" alt="MIT Scratch Blogs">
-            <h1>Scratch Blogs</h1>
-            <p>Scratch is an educational, block-based programming languge developed by MIT. In addition to teaching, I also write blog articles/tutorials for my company. here is a selection.</p>
-            <div class="scratch-dropdown-container">
-              <button type="button" name="button">Posts<span class="tr-icon-down-open"></span></button>
-              <div class="scratch-dropdown">
-                  <a href="https://www.create-learn.us/blog/easy-cross-the-road-game-on-scratch/" class="scratch-dropdown-link" target="_blank">Cross the Road</a>
-                  <a href="https://www.create-learn.us/blog/coding-for-girls-best-platforms/" class="scratch-dropdown-link" target="_blank">Coding for Girls</a>
-                  <a href="https://www.create-learn.us/blog/make-memory-matching-game-scratch/" class="scratch-dropdown-link" target="_blank">Memory Match</a>
-                  <a href="https://www.create-learn.us/blog/make-a-jumping-game-in-scratch/" class="scratch-dropdown-link" target="_blank">Jumping Game</a>
-                  <a href="https://www.create-learn.us/blog/how-to-make-a-mario-game-on-scratch/" class="scratch-dropdown-link" target="_blank">Mario Game</a>
-            </div>
+        </div>
+        
+      </section>
+
+      <a name="old-portfolio-anchor"></a>
+      <section class="old-portfolio">
+        <div class="old-portfolio-title-bar">
+          <h1 class="old-portfolio-title">Older Projects</h1>
+          <span class="tr-icon-right-open old-portfolio-title-bar-arrow-open"></span>
+          <span class="tr-icon-down-open hide old-portfolio-title-bar-arrow-close"></span>
+        </div>
+        <div class="old-portfolio-content-wrapper">
+          <div class="old-portfolio-content">
+            
+            <div class="portfolio-container">
+              <div class="portfolio-item">
+                <img src="img/portfolio-xochis.webp" alt="Xochis Apothecary Website">
+                <h1>Xochis Apothecary</h1>
+                <p>This WordPress site features a 100% custom theme, and utilizes BootStrap and jQeury. No longer in use, but I've saved a preview (API integration for Google Maps and Instagram not maintained)</p>
+                <a href="https://xochis.taprootcoding.com/" target="_blank"><button type="button" name="button">Veiw Website</button></a>
+                <a href="https://github.com/iankuzmik/taproot-apothecary-theme" target="_blank"><button type="button" name="button">View Code</button></a>
+              </div>
+              <div class="portfolio-item" id="old-portfolio-mql4-div">
+                <img src="img/portfolio-mql4.webp" alt="MQL4 Programs">
+                <h1>MQL4 Programs</h1>
+                <p>Indicators and Trading Bots written in MQL4 for my Youtube Tutorial series on MetaTrader4.</p>
+               <a href="https://github.com/IanKuzmik/mql4-lesson-source-code" target="_blank"><button type="button" name="button">Github</button></a>
+               <a href="https://www.youtube.com/playlist?list=PLb9YitM1XhXNnVjmm0ZjMxQoOxw0W8Vl5" target="_blank"><button type="button" name="button">YouTube</button></a>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/portfolio-scratch-mit.webp" alt="MIT Scratch Blogs">
+                <h1>Scratch Blogs</h1>
+                <p>Scratch is an educational, block-based programming languge developed by MIT. In addition to teaching, I also wrote blog articles/tutorials for the tutoring company I worked for. Here is a selection.</p>
+                <div class="scratch-dropdown-container">
+                  <button type="button" name="button" id="scratch-posts">Posts<span class="tr-icon-down-open"></span></button>
+                  <div class="scratch-dropdown">
+                      <a href="https://www.create-learn.us/blog/easy-cross-the-road-game-on-scratch/" class="scratch-dropdown-link" target="_blank">Cross the Road</a>
+                      <a href="https://www.create-learn.us/blog/coding-for-girls-best-platforms/" class="scratch-dropdown-link" target="_blank">Coding for Girls</a>
+                      <a href="https://www.create-learn.us/blog/make-memory-matching-game-scratch/" class="scratch-dropdown-link" target="_blank">Memory Match</a>
+                      <a href="https://www.create-learn.us/blog/make-a-jumping-game-in-scratch/" class="scratch-dropdown-link" target="_blank">Jumping Game</a>
+                      <a href="https://www.create-learn.us/blog/how-to-make-a-mario-game-on-scratch/" class="scratch-dropdown-link" target="_blank">Mario Game</a>
+                  </div>
+                </div>
+                <a href="https://scratch.mit.edu/projects/620053739/" target="_blank"><button type="button" name="button">Play a Game</button></a>
+              </div>
+
+              <div class="portfolio-item">
+                <img src="img/portfolio-taproot-plugin.webp" alt="tapRoot-Toolbox Plugin">
+                <h1>tapRoot-Toolbox</h1>
+                <p>A small WordPress plugin to add HTTP headers for better security on client websites. Not maintained</p>
+                <a href="https://github.com/iankuzmik/tr-toolbox" target="_blank"><button type="button" name="button">Veiw Code</button></a>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/portfolio-resume.webp" alt="Resume Website">
+                <h1>This Resume Website</h1>
+                <p>I tried to be as simple and lightweight as possible while still delivering dynamic and useful content. All code used for this site, minus Fontello font icons, is entirely my own.</p>
+                <a href="https://github.com/iankuzmik/taprootcoding" target="_blank"><button type="button" name="button">Veiw Code</button></a>
+              </div>
+              <div class="portfolio-item">
+                <img src="img/portfolio-tradingView.webp" alt="Pine Script Trading Bots">
+                <h1>Pine Script Trading Bots</h1>
+                <p>Three trading robots written in Pine Script for the TradingView platform. These were my first profitable scripts, geared towards the Crypto market.</p>
+               <a href="https://www.tradingview.com/u/tapRoot_coding/#published-scripts" target="_blank"><button type="button" name="button">TV Profile</button></a>
+              </div>
+            
           </div>
         </div>
       </section>
 
       <a name="resume-anchor"></a>
-      <hr>
+      <!-- <hr> -->
 
       <section class="resume">
         <h1>Resume</h1>
         <p>
           I've put together a compact, quick-read resume for convenience, as well as a full resume with more
-          explanations (attached below). In the interest of privacy, references are only sent with an application, 
-          and not posted here.
+          elaboration (attached below). References available upon request.
         </p>
         <a href="doc/web-resume-compact.pdf" target="_blank"><button type="button" name="button">Compact <span class="tr-icon-print print-resume"></span></button></a>
         <a href="doc/web-resume-full.pdf" target="_blank"><button type="button" name="button">Full <span class="tr-icon-print print-resume"></span></button></a>
         <div class="row">
           <div class="experience" data-col="9">
-            <h1>Experience</h1>
+            <h1>Professional Experience</h1>
             <ul>
               <li>
-                <h3>Coding Instructor — September 2020 - Present</h3>
-                <h4>Create & Learn - Remote</h4>
+                <h3>Programmer/Analyst: February 2022 - Present</h3>
+                <h4>Norwich University - Vermont (Remote)</h4>
                 <p>
-                  I teach mostly K-6 kids block-based languages (Scratch/Thunkable/Micro:Bit) as well as basic HTML, CSS, and JavaScript. 
-                  I also contribute to the company's blog, primarily tutorials for games in Scratch (see portfolio).
+                  Enterprise software integration with Banner (an ERP for higher ed). Technical work requires competency in API and SFTP protocols, as well as a high level of comfort with scripting and data manipulation (mainly via SQL). Because we are a very small team, I've had the opportunity to spearhead the technical side of large projects, such as modernizing our LMS and housing management system with new software vendors.
                 </p>
               </li>
               <li>
-                <h3>Algorithmic Trading — March 2021 - Present</h3>
-                <h4>tapRoot Coding - My Passion Project</h4>
+                <h3>Online Coding Instructor: September 2020 - February 2022</h3>
+                <h4>Create & Learn - Remote</h4>
                 <p>
-                  Developing algorithms in Pine Script (similar to Python) and MQL4 (similar to C++) for the purpose of automated trading in the 
-                  Forex and Crypto markets. Examples in portfolio.
+                  I taught mostly K-6th grade kids block-based languages (Scratch/Thunkable/Micro:Bit) as well as basic HTML, CSS, and JavaScript. 
+                  I also contributed to the company's blog, primarily tutorials for games in Scratch (see portfolio).
                 </p>
               </li>
               <li>
                 <h3>WordPress Websites</h3>
-                <h4>RambleBerry WildCraft - Side Hustle: Ongoing</h4>
+                <h4>RambleBerry WildCraft - Side Hustle: January 2017 - Ongoing</h4>
                 <p>
-                  This <a href="https://rambleberry.co/" target="_blank" class="tr-link">website</a> for my wife's business has been through many iterations, including a completely custom WordPress theme with Instagram and Google Maps integration (preview in portfolio). 
-                  Currently utilizing WooCommerce with a third party theme for ease of maintenance. 
+                  This <a href="https://rambleberry.co/" target="_blank" class="tr-link">website</a> for my wife's business has been through many iterations, including a completely custom WordPress theme with Instagram and Google Maps integration (preview in portfolio). Most recently, I am utilizing WooCommerce with a third party theme for ease of maintenance. Currently 'under construction' as we transition to Spring.
                 </p>
                 <h4>Red Lodge Senior Center - Red Lodge, MT: March 2020 - July 2021</h4>
                 <p>
-                  Built with Elementor for the local <a href="https://redlodgeseniorcenter.org/" target="_blank" class="tr-link">Senior Center</a>. I also dealt with hosting issues before training a board member on troubleshooting and site maintenance/updates. 
+                  Built with Elementor (low-code Wordpress website builder) for the local <a href="https://redlodgeseniorcenter.org/" target="_blank" class="tr-link">Senior Center</a>. I also handled hosting issues before training a board member on troubleshooting and site maintenance/updates. 
                 </p>
               </li>
+            </ul>
+            <h1>Not Directly Related Experience</h1>
+            <ul>
               <li>
-                <h3>ESL Teacher — November 2019 - September 2020</h3>
+                <h3>ESL Teacher: November 2019 - September 2020</h3>
                 <h4>VIPKid - Remote</h4>
                 <p>
                   Private English classes for Chinese students, Pre-K through 8th grade. Grammatical/Phonetic knowledge of the English language aside, 
@@ -181,14 +217,7 @@
                 </p>
               </li>
               <li>
-                <h3>Farmers Market Vendor — January 2017 - September 2021</h3>
-                <h4>RambleBerry WildCraft - Red Lodge, MT</h4>
-                <p>
-                  Face-to-face sales as well as product development (mostly labeling and graphics), inventory management, and wild-foraging for raw ingredients.
-                </p>
-              </li>
-              <li>
-                <h3>Property Management — August 2019 - March 2020</h3>
+                <h3>Property Management: August 2019 - March 2020</h3>
                 <h4>W Ranch - Luther, MT</h4>
                 <p>
                   Maintenance of a private vacation ranch. Duties included: light construction, landscaping, animal care, 
@@ -196,18 +225,35 @@
                 </p>
               </li>
               <li>
-                <h3>Service Industry — Fall 2015 - Spring 2019</h3>
+                <h3>Service Industry: Fall 2015 - Spring 2019</h3>
                 <p>
                   I worked at a number of different restaurants during my time in New Orleans and Red Lodge, MT, from pizza to fine dining. Roles included: 
-                  Acting Head Chef - Kitchen Manager - Cook - Server - Baker - Prep - Dishwasher
+                  Interim Chef - Kitchen Manager - Cook - Server - Baker - Prep - Dishwasher
                 </p>
               </li>
               <li>
-                <h3>Ranch Hand — August 2015 - October 2015</h3>
+                <h3>Ranch Hand: August 2015 - October 2015</h3>
                 <h4>Rancho Cabron - Baja California, Mexico</h4>
                 <p>
                   Standard farm work on a goat dairy. Duties included feeding/milking/shepherding goats, cheesemaking, gardening, 
-                  and ranch maintenance (including the water system; very important in the desert!)
+                  and ranch maintenance (including the water system; very important in the desert)
+                </p>
+              </li>
+            </ul>
+            <h1>Substantial Hobbies</h1>
+            <ul>
+              <li>
+                <h3>Farmers Market Vendor: January 2017 - Present</h3>
+                <h4>RambleBerry WildCraft - Red Lodge, MT & West Rupert, VT</h4>
+                <p>
+                  My wife and I sell tea and incense (which she masterfully makes) at the local farmers market every week. We utilize both wild-foraged and farm-grown products, mainly from our property in VT. 
+                </p>
+              </li>
+              <li>
+                <h3>Algorithmic Trading: on and off since March 2021</h3>
+                <h4>tapRoot Coding - Passion Project</h4>
+                <p>
+                  Developing algorithms for the purpose of automated trading in the Forex and Crypto markets, as well as simple tools to aid in stock market analysis. Examples in portfolio.
                 </p>
               </li>
             </ul>
@@ -219,45 +265,62 @@
                 <h3>Contact/Social</h3>
                 <ul class="contact">
                   <li><span class="tr-icon-mail-alt"></span><a href="mailto:kuzmik951@gmail.com" target="_blank">kuzmik951@gmail.com</a></li>
-                  <li><span class="tr-icon-instagram-filled"></span><a href="https://www.instagram.com/taproot.coding/" target="_blank">instagram.com/taproot.coding</a></li>
                   <li><span class="tr-icon-youtube-play"></span><a href="https://www.youtube.com/channel/UCXNQtBHYVZi2fNfFmCgarDQ" target="_blank">Youtube Channel</a></li>
-                  <li><span class="tr-icon-twitter"></span><a href="https://twitter.com/taprootcoding" target="_blank">twitter.com/tapRootCoding</a></li>
                   <li><span class="tr-icon-github"></span><a href="https://github.com/iankuzmik" target="_blank">github.com/IanKuzmik</a></li>
                 </ul>
               </div>
-              <div class="languages">
-                <h3>Languages</h3>
+              <div class="proficient-languages">
+                <h3>Proficient In</h3>
                 <ul>
-                  <li>HTML/CSS/JavaScript/PHP</li>
-                  <li>Sass</li>
-                  <li>Pine Script</li>
-                  <li>MQL4</li>
+                  <li>SQL</li>
+                    <ul>
+                      <li>PL/SQL</li>
+                      <li>MySQL</li>
+                    </ul>
                   <li>Python</li>
-                  <li>SQLite</li>
+                  <li>Bash</li>
                 </ul>
               </div>
-              <div class="libraries">
-                <h3>Libraries</h3>
+              <div class="familiar-languages">
+                <h3>Familiar With</h3>
                 <ul>
-                  <li>jQuery</li>
-                  <li>Bootstrap</li>
-                  <li>React</li>
+                  <li>HTML/CSS</li>
+                    <ul>
+                      <li>Bootstap</li>
+                      <li>Sass</li>
+                    </ul>
+                  <li>Javascript</li>
+                    <ul>
+                      <li>JQuery</li>
+                      <li>React</li>
+                    </ul>
+                  <li>PHP</li>
+                  <li>C++</li>
+                  <li>Groovy</li>
+                  <li>MQL4</li>
+                  <li>Perl</li>
                 </ul>
               </div>
-              <div class="software">
-                <h3>Software</h3>
+              <div class="worked-with">
+                <h3>Have Worked With</h3>
                 <ul>
-                  <li>Github</li>
-                  <li>Affinity Photo</li>
-                  <li>WordPress</li>
-                  <li>npm</li>
-                  <li>MAMP</li>
-                  <li>Scratch</li>
-                  <li>Thunkable</li>
+                  <li>CMake</li>
+                  <li>Git</li>
+                  <li>Package Managers</li>
+                    <ul>
+                      <li>npm, Homebrew, pip</li>
+                    </ul>
+                  <li>Excel & Google Sheets</li>
+                  <li>Web Scraping Libraries</li>
+                  <li>XML, JSON, Flat File</li>
+                  <li>Low/No Code Platforms</li>
+                  <li>Self-Hosted Generative AI</li>
                 </ul>
               <div class="education">
                 <h3>Education</h3>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ebd4a77d-5f65-41ba-9625-6b93f9ebc9e5" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                 <ul>
+                  <li>Norwich University - Micro Finance Certification (2023)</li>
                   <li>TEFL Certification (2019)</li>
                   <li>Tulane University: BA - English (2015)</li>
                 </ul>
@@ -273,7 +336,7 @@
 
   <footer>
     <div class="bottom-bar">
-      <p>Copyright 2022 - Ian Kuzmik</p>
+      <p>Copyright 2025 - Ian Kuzmik</p>
       <p class="email">Contact: <a href="mailto:kuzmik951@gmail.com" target="_blank">kuzmik951@gmail.com</a></p>
     </div>
   </footer>
